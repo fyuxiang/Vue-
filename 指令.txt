@@ -48,8 +48,12 @@ v-model=""
 {{el | }}
 需要定义filters属性，filter函数可以传递参数，|之前的值默认作为右侧的第一个参数，filter（arg1，arg2），其中分别作为第二个参数，
 原理是Thunk函数，可以链式表达
-
-
+v-for="(item,key,index) in items"
+items可以为Array，Object，Number等数据类型，
+v-bind:class=""
+可以是数组[classA,classB]，也可以是对象{'classA':true/false}，也可以是方法返回的对象return {'classA':true/false}
+v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"
+也可以是对象或者是数组，或return的一个对象
 
 
 
