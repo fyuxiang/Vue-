@@ -1,1 +1,31 @@
-
+用法：
+new Vue({
+  el:"#id",//id选择器，为vue实例的挂载目标
+  data:{},//components中这里只能用对象的属性简写方式data(){return {}}
+  methods:{},//方法属性，与computed的区别在于，computed依赖于缓存，而methods只要在生命周期内发生了更新就运行，其被依赖的属性必须挂载在this上
+  computed:{
+    computedOne:{//可设置访问其属性
+      get:function(){},
+      set func(){}
+    }
+  },//计算属性
+  watch:{
+    props:function([newValue[,oldValue]]){}//监听属性也可以通过this.$watch来调用这个方法
+  },
+  beforeCreat:function(){
+    //此时已经new了，但是还没有完成this实例的初始化，获取不到this.$data,但是可以通过this.$options.data()来获取，
+  },
+  created:function(){
+    //new 实例已经完成，已经把data属性配置到this，可以获取到this.$data,但还获取不到el对象，即挂载对象
+  },
+  beforeMount(){
+    //el对象可以获取到，但是此时是dom树还没被vue解析完成，Vnode还没有生成；
+  }，
+  mounted(){
+    //此时可以获取到渲染后的dom节点
+  }，
+  beforeUpdate(){},
+  updated(){},
+  beforeDestroy(){},
+  destroyed(){}
+});
