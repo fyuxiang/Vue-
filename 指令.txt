@@ -54,8 +54,21 @@ v-bind:class=""
 可以是数组[classA,classB]，也可以是对象{'classA':true/false}，也可以是方法返回的对象return {'classA':true/false}
 v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"
 也可以是对象或者是数组，或return的一个对象
-
-
+v-on:click="";//事件的修饰符
+v-on:click.stop.prevent.capture.self.once分别为组织冒泡，阻止默认事件，事件捕获时，事件只在自身发生，只发生一次
+v-on:keyup.enter/alt.13同时两个按键
+.tab
+.delete (捕获 "删除" 和 "退格" 键)
+.esc
+.space
+.up
+.down
+.left
+.right
+.ctrl
+.alt
+.shift
+.meta
 
 
 
