@@ -20,10 +20,10 @@ new Vue({
   },
   beforeMount(){
     //el对象可以获取到，但是此时是dom树还没被vue解析完成，Vnode还没有生成；
-  }，
+  },
   mounted(){
     //此时可以获取到渲染后的dom节点
-  }，
+  },
   beforeUpdate(){},
   updated(){},
   beforeDestroy(){},
